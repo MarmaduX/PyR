@@ -23,7 +23,7 @@ sql_tabla_preg = '''CREATE TABLE PregyResp (
 if __name__ == '__main__':
     try:
         print('Creando Base de Datos...')
-        conexion = sqlite3.connect('..\PreguntasyRespuestas\pregyresp.db')
+        conexion = sqlite3.connect('..\PyRHeroku\pregyresp.db')
 
         print('Creando Tablas...')
         conexion.executescript(sql_tabla_usuario)

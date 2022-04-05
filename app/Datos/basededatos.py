@@ -1,7 +1,7 @@
 import sqlite3
 
 class BaseDeDatos:
-    url_base_de_datos = '..\PreguntasyRespuestas\pregyresp.db'
+    url_base_de_datos = '..\PyRHeroku\pregyresp.db'
 
     def _crear_conexion(self):
         try:

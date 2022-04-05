@@ -1,4 +1,4 @@
-from Datos.Modelos import user as modelo_usuario, preguntas as modelo_preguntas
+from ..Datos.Modelos import user as modelo_usuario, preguntas as modelo_preguntas
 
 def crear_usuario(nombre, usuario, clave):
     modelo_usuario.crear_usuario(nombre, usuario, clave)

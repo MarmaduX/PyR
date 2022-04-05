@@ -78,9 +78,6 @@ def acreditar(plata):
     autenticacion.modificar_usuario(session["user"][1], plata)
     return "ok"
 
-# this string is used for security reasons (see CSRF)
-app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-
 if __name__ == '__main__':
     app.debug = True
     app.run(port=5001)

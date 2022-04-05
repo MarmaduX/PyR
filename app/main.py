@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, session, url_for, redirect
-from Servicios import autenticacion
+from .Servicios import autenticacion
 import random
 
 app = Flask(__name__)

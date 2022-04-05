@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+    <link href="{{ url_for('static', filename='/css/estilos.css') }}" rel="stylesheet">
+    <!-- Fuente del logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <p style="color: rgb(255, 255, 255);">{{user[1]}}</p>
+            <p style="color: rgb(255, 255, 255);">Dinero: <span style="color: gold;">${{user[4]}}</span></p>
+            <a class="" href="/juego">Jugar</a>
+            <a class="" href="/logout">Salir</a>
+        </div>
+        <h1 class="titulo"> Preguntas y Respuestas<h1>
+    </header>
+    <section>
+        <div class="form">
+            <form action="/quiz" method="POST">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="quiz">Pregunta:</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="quiz" name="quiz" required placeholder="Ingrese la pregunta..."
+                            type="text" size="50" maxlength="200" rows="5" style="width: 60%;"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="resp1">Respuesta 1:</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="resp1" name="resp1" required placeholder="Ingrese la respuesta 1..."
+                            type="text" size="50" maxlength="200">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="resp2">Respuesta 2:</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="resp2" name="resp2" required placeholder="Ingrese la respuesta 2..."
+                            type="text" size="50" maxlength="200">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="resp3">Respuesta 3:</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="resp3" name="resp3" required placeholder="Ingrese la respuesta 3..."
+                            type="text" size="50" maxlength="200">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="resp4">Respuesta 4:</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="resp4" name="resp4" required placeholder="Ingrese la respuesta 4..."
+                            type="text" size="50" maxlength="200">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="correct">Respuesta Correcta:</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="correct">
+                            <option value="resp1">Respuesta 1</option>
+                            <option value="resp2">Respuesta 2</option>
+                            <option value="resp3">Respuesta 3</option>
+                            <option value="resp4">Respuesta 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="cat">Categoria</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="cat">
+                            <option value="Categoria 1">1</option>
+                            <option value="Categoria 2">2</option>
+                            <option value="Categoria 3">3</option>
+                            <option value="Categoria 4">4</option>
+                            <option value="Categoria 5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <button class="submit">Crear Quiz</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

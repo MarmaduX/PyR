@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+    <link href="{{ url_for('static', filename='/css/estilos.css') }}" rel="stylesheet">
+    <!-- Fuente del logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <p style="color: rgb(255, 255, 255);">{{user[1]}}</p>
+            <p style="color: rgb(255, 255, 255);">Dinero: <span style="color: gold;">${{dinero}}</span></p>
+            <a class="" href="/quiz">Crear Quiz</a>
+            <a class="" href="/logout">Salir</a>
+        </div>
+        <h1 class="titulo"> Preguntas y Respuestas<h1>
+    </header>
+    <section>
+        <div class="form">
+            <div>
+                EL juego consiste en una serie de preguntas con 4 opciones de
+                respuesta y una de ella válida, las preguntas estan categorizadas y a medida que se vaya respondiendo correctamente se ira aumentando el nivel.
+                Por cada ronda se extrae una pregunta de esa categoría de forma
+                aleatoria, existen 5 rondas en todo el juego, cada ronda otorga premios (dinero)
+                cuando el jugador acierta correctamente.
+                <br>
+                El acomulado de premios está dentro del concurso pero si dado el caso el jugador pretender
+                salir de juego puede retirarse antes de responder a la pregunta, si por el contrario el jugador
+                pierde entonces saldría del juego sin el acomulado que llevaría en ese momento.
+            </div>
+            <div>
+                <a href="/categoria/1"><button class="submit">Jugar</button></a>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

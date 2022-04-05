@@ -4,6 +4,8 @@ import random
 
 app = Flask(__name__)
 
+server = app.server
+
 @app.route('/')
 @app.route('/index')
 @app.route('/inicio', methods=['GET'])

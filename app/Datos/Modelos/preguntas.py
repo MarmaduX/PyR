@@ -1,4 +1,4 @@
-from ..basededatos import BaseDeDatos
+from Datos.basededatos import BaseDeDatos
 
 def crear_pregunta(pregunta, respuesta1, respuesta2, respuesta3, respuesta4, correcta, categoria, premio):
     crear_usuario_sql = f"""

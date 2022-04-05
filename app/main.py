@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, session, url_for, redirect
-from .Servicios import autenticacion
+from Servicios import autenticacion
 import random
 
 app = Flask(__name__)
@@ -77,6 +77,9 @@ def acreditar(plata):
     plata = plata + session["user"][4]
     autenticacion.modificar_usuario(session["user"][1], plata)
     return "ok"
+
+# this string is used for security reasons (see CSRF)
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 if __name__ == '__main__':
     app.debug = True

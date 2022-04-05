@@ -1,4 +1,4 @@
-from ..basededatos import BaseDeDatos
+from Datos.basededatos import BaseDeDatos
 
 
 def crear_usuario(nombreCompleto, nombreUsuario, contraseña):
